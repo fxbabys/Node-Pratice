@@ -1,0 +1,17 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "crawler test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "request": "latest",
+    "request-promise": "~4.2.2",
+    "cheerio": "latest",
+    "fs": "latest"
+  },
+  "author": "DayBreak",
+  "license": "ISC"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+请输入要检索的网址：<input type="text" name="" id="url">
+<button id="btn">确定</button>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+    $('#btn').on('click', function() {
+        $.ajax({
+            url: 'http://localhost:8888/getMsg',
+            type: 'get',
+            data: {
+                str: $('#url').val()
+            },
+            success: function(data) {
+                console.log(data);
+
+                var json = eval('('+ data +')').count;
+                var arr = [];
+                json.forEach(data => {
+                    arr.push({
+                        name: data.w,
+                        value: data.c
+                    })
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
